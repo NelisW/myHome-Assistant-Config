@@ -1,6 +1,6 @@
 # Home-Assistant Config Files
 
-This is a shameless copy of [Brian J King's configuration management framework]
+This is a shameless copy of [Brian J King's configuration management framework](https://github.com/brianjking/homeassistant-config)
 
 ![Home Assistant Logo](https://github.com/brianjking/hass-config/blob/master/images/hass.png "Home Assistant Logo")
 
@@ -22,11 +22,4 @@ This is a shameless copy of [Brian J King's configuration management framework]
 
 ### Sensors
 
-
-
-### Preview
-
-#### To-Do
-
-* Check the [issues](https://github.com/brianjking/hass-config/issues) for anything not working properly in my config or that I plan to implement. 
 
