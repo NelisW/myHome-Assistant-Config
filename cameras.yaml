@@ -1,0 +1,5 @@
+#camera: rpi_camera
+- platform: rpi_camera
+  name: raspicam
+  image_rotation: 180
+  timelapse: 1000

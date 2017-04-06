@@ -1,0 +1,78 @@
+###Views  
+default_view:
+  view: yes
+  entities:
+#    - sensor.outside_front_temp
+#    - alarm_control_panel.home_armed_status
+ #   - group.main_switches_grp
+    
+alarm_view:
+  view: yes
+  name: Alarm
+ # entities:
+#    - group.beam_enable_grp
+ #   - group.alarm_zones_grp
+    
+camera_view:
+  view: yes
+  name: Cameras
+  entities:
+    - camera.raspicam
+ #   - group.alarm_zones_grp
+    
+power_view:
+  view: yes
+  name: Energy
+  entities:
+    - group.power_grp
+    
+enviro_view:
+  view: yes
+  name: Environment
+  entities:
+    - sun.sun
+    - group.wunderground_grp
+
+wunderground_grp:
+  name: WU Data
+  entities:
+    - sensor.pws_observation_time
+    - sensor.pws_alerts
+    - sensor.pws_pressure_mb
+    - sensor.pws_pressure_trend
+    - sensor.pws_relative_humidity
+    - sensor.pws_temp_c
+    - sensor.pws_weather
+
+
+
+power_grp:
+  name: Home Power Status
+  entities:
+    - sensor.energy_consumed
+    - sensor.efergy_695914
+#    - sensor.battery_level
+#    - sensor.power_status
+
+
+#beam_enable_grp:
+ # name: Beam Enable
+  #entities:
+    #- automation.alarm_back_garden_notification
+    #- automation.alarm_front_garage_notification
+    #- automation.alarm_front_garden_notification      
+#alarm_zones_grp:
+#  name: Zone Monitor
+  #entities:
+    #- alarm_zone_monitor.doors
+    #- alarm_zone_monitor.main_cameron_room
+    #- alarm_zone_monitor.back_garden
+    #- alarm_zone_monitor.front_garage
+    #- alarm_zone_monitor.front_garden
+    #- alarm_zone_monitor.loung_dining_room
+    #- alarm_zone_monitor.panic
+    #- alarm_zone_monitor.study_front_room
+#main_switches_grp:
+#  name: Main Switches
+ # entities:
+#   - switch.front_outside_light

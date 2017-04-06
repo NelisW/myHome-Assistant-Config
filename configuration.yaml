@@ -1,0 +1,92 @@
+homeassistant:
+  # Name of the location where Home Assistant is running
+  name: Home
+  # Location required to calculate the time the sun rises and sets
+  latitude: !secret latitude
+  longitude: !secret longitude
+  # Impacts weather/sunrise data (altitude above sea level in meters)
+  elevation: !secret elevation
+  # metric for Metric, imperial for Imperial
+  unit_system: metric
+  # Pick yours from here: http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
+  time_zone: Africa/Johannesburg
+
+
+  customize:
+    sensor.pws_alerts:
+      friendly_name: Weather alerts
+    sensor.pws_pressure_mb:
+      friendly_name: Pressure mB
+    sensor.pws_pressure_trend:
+      friendly_name: Pressure trend
+    sensor.pws_relative_humidity:
+      friendly_name: Relative humidity
+    sensor.pws_temp_c:
+      friendly_name: Temperature deg C
+    sensor.pws_weather:
+      friendly_name: Weather
+    sensor.pws_observation_time:
+      friendly_name: Observation time
+
+    sensor.energy_consumed:
+      friendly_name: Energy generated (since midnight)
+    sensor.efergy_695914:
+      friendly_name: Current generation
+
+http:
+  # Uncomment this to add a password (recommended!)
+  api_password: !secret http_api_password
+  # Uncomment this if you are using SSL or running in Docker etc
+  # base_url: example.duckdns.org:8123
+
+     
+# Text to speech
+tts:
+  platform: google
+
+
+mqtt:
+  broker: !secret mqtt_broker
+  port: 1883
+  client_id: !secret mqtt_client_id
+  username: !secret mqtt_username
+  password: !secret mqtt_password 
+ 
+#automation:
+  #- alias: Check sensor value and show notification
+    #trigger:
+      #platform: numeric_state
+      #entity_id: sensor.rnd
+      #above: 190
+    #action:
+      #service: persistent_notification.create
+      #data:
+        #message: "Sensor value greater than 190"
+
+
+#########################################################
+#  includes
+
+sensor: !include sensors.yaml
+camera: !include cameras.yaml
+#switch: !include switches.yaml
+
+group: !include groups.yaml
+
+#########################################################
+#  enables
+
+updater:
+discovery:
+conversation:
+history:
+logbook:
+sun:
+frontend:
+config:
+# logger
+#introduction:
+
+
+
+# https://github.com/bruhautomation/BRUH2-Home-Assistant-Configuration/blob/master/sensors.yaml

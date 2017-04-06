@@ -1,0 +1,42 @@
+
+
+
+#sensor yr:
+- platform: yr
+  monitored_conditions:
+    - temperature
+    - symbol
+    - precipitation
+    - pressure
+    - humidity
+
+#sensor wunderground:
+- platform: wunderground
+  api_key: !secret wunderground_api_key
+  monitored_conditions:
+    - alerts
+    - pressure_mb
+    - pressure_trend
+    - relative_humidity
+    - observation_time
+    - temp_c
+    - weather
+
+
+#sensor random:
+- platform: random
+  name: random
+  minimum: 0
+  maximum: 200
+
+
+#sensor efergy:
+- platform: efergy
+  name: efergy
+  app_token: !secret efergy_app_token
+  utc_offset: -300
+  monitored_variables:
+    - type: amount
+      period: day
+    - type: current_values 
+
