@@ -3,27 +3,28 @@ default_view:
   view: yes
   entities:
     - group.main_switches_grp
-#    - sensor.outside_front_temp
-#    - alarm_control_panel.home_armed_status
+
     
 alarm_view:
   view: yes
   name: Alarm
-#  entities:
-#    - group.beam_enable_grp
- #   - group.alarm_zones_grp
+  entities:
+    - group.primary_alarm_grp
+
     
 camera_view:
   view: yes
   name: Cameras
   entities:
     - camera.raspicam
+  
     
 power_view:
   view: yes
   name: Energy
   entities:
     - group.solar_energy_grp
+ 
     
 enviro_view:
   view: yes
@@ -32,12 +33,18 @@ enviro_view:
     - sun.sun
     - group.wunderground_grp
 
+
 host_view:
   view: yes
   name: Host
   entities:
     - group.host_grp
 
+### Groups
+
+primary_alarm_grp:
+  name: Primary monitor
+  #entities:
 
 host_grp:
   name: Host
@@ -52,7 +59,7 @@ host_grp:
 
 
 
-
+# ESP switches, currently all sonoffs
 main_switches_grp:
   name: Switches
   entities:
@@ -82,25 +89,4 @@ solar_energy_grp:
   entities:
     - sensor.energy_consumed
     - sensor.efergy_695914
-#    - sensor.battery_level
-#    - sensor.power_status
-
-
-#beam_enable_grp:
- # name: Beam Enable
-  #entities:
-    #- automation.alarm_back_garden_notification
-    #- automation.alarm_front_garage_notification
-    #- automation.alarm_front_garden_notification      
-#alarm_zones_grp:
-#  name: Zone Monitor
-  #entities:
-    #- alarm_zone_monitor.doors
-    #- alarm_zone_monitor.main_cameron_room
-    #- alarm_zone_monitor.back_garden
-    #- alarm_zone_monitor.front_garage
-    #- alarm_zone_monitor.front_garden
-    #- alarm_zone_monitor.loung_dining_room
-    #- alarm_zone_monitor.panic
-    #- alarm_zone_monitor.study_front_room
 

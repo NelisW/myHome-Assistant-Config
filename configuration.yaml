@@ -10,30 +10,9 @@ homeassistant:
   unit_system: metric
   # Pick yours from here: http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
   time_zone: Africa/Johannesburg
-  
+  # it seems that customize must be inder the main entry
   customize: !include customizes.yaml
 
-  #customize:
-    #sensor.pws_alerts:
-      #friendly_name: Weather alerts
-    #sensor.pws_pressure_mb:
-      #friendly_name: Pressure mB
-    #sensor.pws_pressure_trend:
-      #friendly_name: Pressure trend
-    #sensor.pws_relative_humidity:
-     #friendly_name: Relative humidity
-    #sensor.pws_temp_c:
-      #friendly_name: Temperature deg C
-    #sensor.pws_weather:
-      #friendly_name: Weather
-    #sensor.pws_observation_time:
-      #friendly_name: Observation time
-
-
-    #sensor.energy_consumed:
-      #friendly_name: Energy generated (since midnight)
-    #sensor.efergy_695914:
-      #friendly_name: Current generation
 
 http:
   # Uncomment this to add a password (recommended!)
@@ -66,18 +45,6 @@ mqtt:
     qos: 1
     retain: true 
     
-    
-#automation:
-  #- alias: Check sensor value and show notification
-    #trigger:
-      #platform: numeric_state
-      #entity_id: sensor.rnd
-      #above: 190
-    #action:
-      #service: persistent_notification.create
-      #data:
-        #message: "Sensor value greater than 190"
-
 
 #########################################################
 #  includes
@@ -101,6 +68,19 @@ frontend:
 config:
 # logger
 #introduction:
+
+#########################################################
+#experimental automation play
+#automation:
+  #- alias: Check sensor value and show notification
+    #trigger:
+      #platform: numeric_state
+      #entity_id: sensor.rnd
+      #above: 190
+    #action:
+      #service: persistent_notification.create
+      #data:
+        #message: "Sensor value greater than 190"
 
 
 
