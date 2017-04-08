@@ -1,0 +1,23 @@
+
+# weather underground
+    sensor.pws_alerts:
+      friendly_name: Weather alerts
+    sensor.pws_pressure_mb:
+      friendly_name: Pressure mB
+    sensor.pws_pressure_trend:
+      friendly_name: Pressure trend
+    sensor.pws_relative_humidity:
+     friendly_name: Relative humidity
+    sensor.pws_temp_c:
+      friendly_name: Temperature deg C
+    sensor.pws_weather:
+      friendly_name: Weather
+    sensor.pws_observation_time:
+      friendly_name: Observation time
+
+# efergy
+    sensor.energy_consumed:
+      friendly_name: Energy generated (since midnight)
+    sensor.efergy_695914:
+      friendly_name: Current generation
+

@@ -1,3 +1,59 @@
 
 #platform: frontoutsidelight
 #command_string: ""
+
+
+#10.0.0.7
+- platform: mqtt
+  name: "Sonoff0924"
+  state_topic: "stat/sonoff0924/POWER"
+  command_topic: "cmnd/sonoff0924/POWER"
+  qos: 1
+  payload_on: "ON"
+  payload_off: "OFF"
+  retain: true
+
+
+#10.0.0.8
+- platform: mqtt
+  name: "Sonoff3935"
+  state_topic: "stat/sonoff3935/POWER"
+  command_topic: "cmnd/sonoff3935/POWER"
+  qos: 1
+  payload_on: "ON"
+  payload_off: "OFF"
+  retain: true
+
+
+# 10.0.0.12  2718
+- platform: mqtt
+  name: "Sonoff2718"
+  state_topic: "stat/sonoff2718/POWER"
+  command_topic: "cmnd/sonoff2718/POWER"
+  qos: 1
+  payload_on: "ON"
+  payload_off: "OFF"
+  retain: true
+
+
+# 10.0.0.13  2184
+- platform: mqtt
+  name: "Sonoff2184"
+  state_topic: "stat/sonoff2184/POWER"
+  command_topic: "cmnd/sonoff2184/POWER"
+  qos: 1
+  payload_on: "ON"
+  payload_off: "OFF"
+  retain: true
+
+
+
+# 10.0.0.16 2804
+- platform: mqtt
+  name: "Stoep"
+  state_topic: "stat/sonoff2804/POWER"
+  command_topic: "cmnd/sonoff2804/POWER"
+  qos: 1
+  payload_on: "ON"
+  payload_off: "OFF"
+  retain: true

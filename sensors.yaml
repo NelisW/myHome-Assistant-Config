@@ -40,3 +40,22 @@
       period: day
     - type: current_values 
 
+
+# raspberry pi system monitor
+- platform: command_line
+  name: CPU Temp
+  command: "/bin/cat /sys/class/thermal/thermal_zone0/temp"
+  unit_of_measurement: "ºC"
+  value_template: '{{ value | multiply(0.001) }}'
+
+- platform: systemmonitor
+  resources:
+  - type: disk_use_percent
+    arg: /
+  - type: memory_free
+  - type: memory_use_percent
+  - type: processor_use
+  - type: since_last_boot
+
+
+
