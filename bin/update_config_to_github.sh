@@ -4,4 +4,4 @@ cd "/home/homeassistant/.homeassistant/"
 sudo git pull
 sudo git add .
 sudo git commit
-sudo git push 
+sudo git push origin master
