@@ -19,6 +19,7 @@ This is a shameless copy of [Brian J King's configuration management framework]
 * Wunderground personal weather station
 * RaspberryPi 2 Model B
 * SanDisk 16gb MicroSD Card
+* ITead Sonoff and Slampher wifi switches
 
 ### Sensors
 
