@@ -41,4 +41,40 @@
     - type: current_values 
 
 # raspberry pi system monitor
+sensor:
+
+  - platform: command_line
+    name: CPU Temp
+    command: "/bin/cat /sys/class/thermal/thermal_zone0/temp"
+    unit_of_measurement: "ºC"
+    value_template: '{{ value | multiply(0.001) }}'
+
+  - platform: systemmonitor
+    resources:
+    - type: disk_use_percent
+      arg: /
+    - type: memory_free
+    - type: memory_use_percent
+    - type: processor_use
+    - type: since_last_boot
+    #- type: network_in
+    #  arg: eth0
+    #- type: network_out
+    #  arg: eth0
+
+I put this in a file `packages/dev_pi.yaml" or similar, and include the package from the main configuration.
+
+Then I havea group:
+
+dev_pi:
+  name: Pi
+  entities:
+    - sensor.cpu_use
+    - sensor.cpu_temp
+    - sensor.disk_use_
+    #- sensor.disk_use_home
+    - sensor.ram_free
+    - sensor.ram_use_percent
+    - sensor.since_last_boot
+
 
