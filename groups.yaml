@@ -42,7 +42,16 @@ host_view:
 host_grp:
   name: Host
   entities:
-   - sensor.systemmonitor
+    - sensor.cpu_use
+    - sensor.cpu_temp
+    - sensor.disk_use_
+    ##- sensor.disk_use_home
+    - sensor.ram_free
+    - sensor.ram_use_percent
+    - sensor.since_last_boot
+
+
+
 
 main_switches_grp:
   name: Switches
