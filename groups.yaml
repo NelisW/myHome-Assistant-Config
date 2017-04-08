@@ -2,14 +2,14 @@
 default_view:
   view: yes
   entities:
+    - group.main_switches_grp
 #    - sensor.outside_front_temp
 #    - alarm_control_panel.home_armed_status
- #   - group.main_switches_grp
     
 alarm_view:
   view: yes
   name: Alarm
- # entities:
+#  entities:
 #    - group.beam_enable_grp
  #   - group.alarm_zones_grp
     
@@ -18,13 +18,12 @@ camera_view:
   name: Cameras
   entities:
     - camera.raspicam
- #   - group.alarm_zones_grp
     
 power_view:
   view: yes
   name: Energy
   entities:
-    - group.power_grp
+    - group.solar_energy_grp
     
 enviro_view:
   view: yes
@@ -33,6 +32,18 @@ enviro_view:
     - sun.sun
     - group.wunderground_grp
 
+
+main_switches_grp:
+  name: Switches
+  entities:
+   - switch.Sonoff0924
+   - switch.Sonoff3935
+   - switch.Stoep   #Sonoff2804
+   - switch.Sonoff2184
+   - switch.Sonoff2718
+
+
+# weather underground group
 wunderground_grp:
   name: WU Data
   entities:
@@ -45,9 +56,9 @@ wunderground_grp:
     - sensor.pws_weather
 
 
-
-power_grp:
-  name: Home Power Status
+# solar energy group
+solar_energy_grp:
+  name: Solar Energy Status
   entities:
     - sensor.energy_consumed
     - sensor.efergy_695914
@@ -72,7 +83,4 @@ power_grp:
     #- alarm_zone_monitor.loung_dining_room
     #- alarm_zone_monitor.panic
     #- alarm_zone_monitor.study_front_room
-#main_switches_grp:
-#  name: Main Switches
- # entities:
-#   - switch.front_outside_light
+
