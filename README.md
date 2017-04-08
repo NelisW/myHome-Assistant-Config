@@ -23,6 +23,7 @@ See detail [here](https://github.com/NelisW/myOpenHab/blob/master/docs/360%20hom
 * Wunderground personal weather station
 * RaspberryPi 2 Model B
 * SanDisk 16gb MicroSD Card
+* ITead Sonoff and Slampher wifi switches
 
 ### Sensors
 
