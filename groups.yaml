@@ -32,6 +32,17 @@ enviro_view:
     - sun.sun
     - group.wunderground_grp
 
+host_view:
+  view: yes
+  name: Host
+  entities:
+    - group.host_grp
+
+
+host_grp:
+  name: Host
+  entities:
+   - sensor.systemmonitor
 
 main_switches_grp:
   name: Switches

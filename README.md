@@ -4,6 +4,10 @@ This is a shameless copy of [Brian J King's configuration management framework](
 
 ![Home Assistant Logo](https://github.com/brianjking/hass-config/blob/master/images/hass.png "Home Assistant Logo")
 
+# Setup Procedure
+
+See detail [here](https://github.com/NelisW/myOpenHab/blob/master/docs/360%20home-assistant.md).
+
 # Home Assistant Configuration
 
 ## Build Status (Travis-CI)
