@@ -1,4 +1,4 @@
 #!/bin/bash
 
 cd "/home/homeassistant/.homeassistant/"
-git pull
+sudo git pull  origin master
