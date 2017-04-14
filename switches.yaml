@@ -16,7 +16,7 @@
 
 #10.0.0.8
 - platform: mqtt
-  name: "Sonoff3935"
+  name: WoonLampNoord #"Sonoff3935"
   state_topic: "stat/sonoff3935/POWER"
   command_topic: "cmnd/sonoff3935/POWER"
   qos: 1

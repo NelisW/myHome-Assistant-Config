@@ -2,6 +2,7 @@
 default_view:
   view: yes
   entities:
+    - group.date_time_grp
     - group.main_switches_grp
 
     
@@ -57,14 +58,18 @@ host_grp:
     - sensor.ram_use_percent
     - sensor.since_last_boot
 
-
+# time and date
+date_time_grp:
+  name: Time
+  entities:
+    - sensor.date__time
 
 # ESP switches, currently all sonoffs
 main_switches_grp:
   name: Switches
   entities:
    - switch.Sonoff0924
-   - switch.Sonoff3935
+   - switch.WoonLampNoord #Sonoff3935
    - switch.Stoep   #Sonoff2804
    - switch.Sonoff2184
    - switch.Sonoff2718
