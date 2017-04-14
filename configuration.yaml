@@ -77,31 +77,30 @@ config:
 #introduction:
 
 #########################################################
-#experimental automation play
+# after dark switch on/off
 automation afterdarkOn:
-  - alias: Switch on lights after dark
-    trigger:
-      platform: time
-      after: '21:40:00'
-    action:
- #     service: switch.woonlampnoord.turn_on
-      service: mqtt.publish
-      data:
-        topic: "cmnd/sonoff3935/POWER"
-        payload": "ON"
+  alias: Switch on after dark lights 
+  initial_state: True
+  hide_entity: False
+  trigger:
+    platform: time
+    after: '22:21:00'
+  action:
+    service: switch.turn_on
+    entity_id: switch.woonlampnoord
 
 automation afterdarkOff:
-  - alias: Switch off lights 
-    trigger:
-      platform: time
-      after: '21:41:00'
-    action:
-  #    service: switch.woonlampnoord.turn_off
-      service: mqtt.publish
-      data:
-        topic: "cmnd/sonoff3935/POWER"
-        payload": "OFF"
+  alias: Switch off after dark lights 
+  initial_state: True
+  hide_entity: False
+  trigger:
+    platform: time
+    after: '22:22:00'
+  action:
+    service: switch.turn_off
+    entity_id: switch.woonlampnoord
 
 
 
 # https://github.com/bruhautomation/BRUH2-Home-Assistant-Configuration/blob/master/sensors.yaml
+
