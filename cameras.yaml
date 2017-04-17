@@ -1,5 +1,21 @@
 #camera: rpi_camera
 - platform: rpi_camera
   name: raspicam
-  image_rotation: 180
+  image_rotation: 0
   timelapse: 1000
+
+#- platform: generic
+#  still_image_url: http://10.0.0.13:85/Streaming/channels/1/picture
+#  name: Hikvision Cam 1
+#  username: !secret kombuiskamerauser
+#  password: !secret kombuiskamerapasswd
+    
+#- platform: hikvisioncam
+#  host: 10.0.0.13
+#  #port: 85
+#  name: Hikvision Cam 1
+#  username: !secret kombuiskamerauser
+#  password: !secret kombuiskamerapasswd
+    
+
+

@@ -1,6 +1,7 @@
 ###Views  
 default_view:
   view: yes
+  icon: mdi:home
   entities:
     - group.date_time_grp
     - group.main_switches_grp
@@ -8,27 +9,24 @@ default_view:
     
 alarm_view:
   view: yes
+  icon: mdi:security-home
   name: Alarm
   entities:
     - group.primary_alarm_grp
-
-    
-camera_view:
-  view: yes
-  name: Cameras
-  entities:
     - camera.raspicam
   
     
 power_view:
   view: yes
   name: Energy
+  icon: mdi:power-socket
   entities:
     - group.solar_energy_grp
  
     
 enviro_view:
   view: yes
+  icon: mdi:weather-partlycloudy
   name: Environment
   entities:
     - sun.sun
@@ -38,6 +36,7 @@ enviro_view:
 host_view:
   view: yes
   name: Host
+  icon: mdi:monitor
   entities:
     - group.host_grp
 

@@ -84,7 +84,7 @@ automation afterdarkOn:
   hide_entity: False
   trigger:
     platform: time
-    after: '22:21:00'
+    after: '18:00:00'
   action:
     service: switch.turn_on
     entity_id: switch.woonlampnoord
@@ -95,7 +95,7 @@ automation afterdarkOff:
   hide_entity: False
   trigger:
     platform: time
-    after: '22:22:00'
+    after: '21:22:00'
   action:
     service: switch.turn_off
     entity_id: switch.woonlampnoord
