@@ -1,5 +1,6 @@
 
-
+# moon phases
+- platform: moon
 
 #sensor yr:
 - platform: yr
